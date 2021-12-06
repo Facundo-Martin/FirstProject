@@ -9,12 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="/css/all.min.css">
 </head>
 <body>
     <section class="header">
         <nav>
             <a href="index.html"><img src="./Images/logo.png" alt="EduFord university logo"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks"> 
+                <i class="fas fa-times" onclick="hideMenu()"></i>                
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -23,9 +25,142 @@
                     <li><a href="">CONTEXT</a></li>
                 </ul>
             </div> 
+            <i class="fas fa-bars" onclick="showMenu()"></i>
         </nav>
-        
+
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>Making website is now one of the easiest things in the world. You just need to learn <br> HTML, CSS and Javascript and you are good to go.</p>
+            <a href="" class="hero-btn">Visit us to know more!</a>
+        </div>
     </section>
     
+
+    <!-- Now that we finished the header, we'll do the Course-->
+
+    <section class="course">
+        <h1>Courses we Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    
+    
+        <div class="row">
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi facilis aliquid nobis provident iure dolores vero sed, numquam dignissimos, obcaecati non nemo culpa quaerat! Itaque est vitae non consectetur provident!</p>
+            </div>
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi facilis aliquid nobis provident iure dolores vero sed, numquam dignissimos, obcaecati non nemo culpa quaerat! Itaque est vitae non consectetur provident!</p>
+            </div>
+            <div class="course-col">
+                <h3>Masters</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi facilis aliquid nobis provident iure dolores vero sed, numquam dignissimos, obcaecati non nemo culpa quaerat! Itaque est vitae non consectetur provident!</p>    
+            </div>
+        </div>
+    
+    </section>
+
+    <!-- Courses done (pretty easy and fast), now onto Campus!-->
+
+    <section class="campus">
+        <h1>Our Global Campus</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        
+        <div class="row">
+            <div class="campus-col">
+                <img src="Images/london.png" alt="london campus image">
+                <div class="layer"> 
+                    <h3>London</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="Images/newyork.png" alt="london campus image">
+                <div class="layer"> 
+                    <h3>New York</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="Images/washington.png" alt="london campus image">
+                <div class="layer"> 
+                    <h3>Washington</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ok looking good, let's carry on with facilities -->
+
+        <section class="facilities">
+            <h1>Our Facilities</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <div class="row">
+                <div class="facilities-col">
+                    <img src="/Images/library.png" alt="school library">
+                    <h3>World Class Library</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="/Images/basketball.png" alt="school basketball court">
+                    <h3>Largest Play Ground</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="/Images/cafeteria.png" alt="school cafeteria">
+                    <h3>Tasty & Healthy Food</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+
+<!-- -----------Testimonials----------- -->
+        
+        <section class="testimonials">
+            <h1>What Our Students Say</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="/Images/user1.jpg" alt="student 1 picture">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime atque quos totam quibusdam nobis dolores nisi cupiditate non ipsum iste et, quam delectus repellat quaerat unde, impedit, saepe voluptate incidunt.</p>
+                        <h3>Christine Berkley</h3>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-col">
+                    <img src="/Images/user2.jpg" alt="student 2 picture">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime atque quos totam quibusdam nobis dolores nisi cupiditate non ipsum iste et, quam delectus repellat quaerat unde, impedit, saepe voluptate incidunt.</p>
+                        <h3>David Byer</h3>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </section>    
+
+
+
+    <!-- JavaScript Toggle Menu (Responsive) -->
+    <script>
+        
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
 </body>
 </html>
